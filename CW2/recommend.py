@@ -39,7 +39,7 @@ neighbour_3_name = name_dict[neighbour_3_ID]
 
 print(neighbour_1_name,neighbour_2_name,neighbour_3_name)
 
-target = X.iloc[8].to_numpy().reshape(1,12)
+target = X_test.to_numpy().reshape(1,12)
 
 top_sim = round(cosine_similarity(target,X.iloc[neighbour_1_posn].to_numpy().reshape(1,12))[0][0],3)
 second_sim = round(cosine_similarity(target,X.iloc[neighbour_2_posn].to_numpy().reshape(1,12))[0][0],3)
