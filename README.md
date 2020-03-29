@@ -22,7 +22,7 @@ Above that, they have categorised all their categories into different plans (eac
 
 Points were assigned to categories and plans for each user by propagating points through the tree for each class they have taken (and the
 amount of times the hava taken that class). So, if the users takes the *Absolute Abs* class, the user will score some points in the 
-*Core* category of classes, and a smaller number of points again in the *Build Muscle* plan of classes.
+*Core* category of classes, and a smaller number of points again in the *Build Muscle* plan of categories.
 
 The users were then matched based on their distance from othet users based on the *cosine* similarity metric. The nearest neighbours
 then influenced which class would be recommended to the target user.
