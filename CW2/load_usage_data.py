@@ -3,9 +3,9 @@ import pandas as pd
 
 datasets = \
     {
-        'users':'/Users/Odhran/Documents/Heriot Watt/eCommerce/CW2_excel/users_modified.xlsx',
-        'items':'/Users/Odhran/Documents/Heriot Watt/eCommerce/CW2_excel/items_modified.xlsx',
-        'users_items':'/Users/Odhran/Documents/Heriot Watt/eCommerce/CW2_excel/user_item_reduced.xlsx'
+        'users':'users_modified.xlsx',
+        'items':'items_modified.xlsx',
+        'users_items':'user_item_reduced.xlsx'
     }
 
 userlist = pd.read_excel(datasets['users'])
