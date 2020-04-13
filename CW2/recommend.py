@@ -25,11 +25,10 @@ y = pd.DataFrame(taxonomy_matrix['ID'])
 
 X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=1,shuffle=False)
 
-knn = NearestNeighbors(n_neighbors=8,algorithm='brute',metric='cosine')
+knn = NearestNeighbors(n_neighbors=3,algorithm='brute',metric='cosine')
 knn.fit(X_train)
 
 neighbours = knn.kneighbors(X_test,return_distance=False)
-
 neighbour_1_posn = neighbours[0][0]
 neighbour_1_ID = y_train.iloc[neighbours[0][0]].values[0]
 neighbour_1_name = name_dict[neighbour_1_ID]
@@ -54,6 +53,7 @@ neighbours_similarity_dict = {
 
 X_test_classes = classes_matrix.iloc[8]
 already_seen_indices = X_test_classes.to_numpy().nonzero()[0]
+
 already_seen_names = list(X_test_classes.index[i] for i in already_seen_indices)
 class_names = classes_matrix.columns.tolist()
 class_names_only = [class_names[i] for i in range(2,len(class_names))]
@@ -76,6 +76,7 @@ recommended_classes_matrix.drop(already_seen_names, inplace=True)
 recommended_classes_matrix.sort_values(ascending=False,inplace=True,kind='heapsort')
 top_3 = [recommended_classes_matrix.index[0],recommended_classes_matrix.index[1],recommended_classes_matrix.index[2]]
 
-print(name_dict[y_test.values[0][0]])
-print(neighbours_similarity_dict)
-print(top_3)
+# print(X_test,y_test)
+# print(name_dict[y_test.values[0][0]])
+# print(neighbours_similarity_dict)
+# print(top_3)
