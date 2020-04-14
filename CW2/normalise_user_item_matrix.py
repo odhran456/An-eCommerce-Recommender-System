@@ -17,7 +17,6 @@ Column 2  - 19  :   Class
 Column 20 - 27  :   Category
 Column 28 - 31  :   Plan
 """
-
 linebreak = [2,len(data_matrix.columns) -1]
 
 for i in range(2,len(data_matrix.columns)-1):
@@ -27,7 +26,7 @@ for i in range(2,len(data_matrix.columns)-1):
 
 linebreak.sort()
 
-empty_matrix = pd.read_csv('/Users/Odhran/PycharmProjects/eComm/CW2/empty_user_item_matrix.csv')
+empty_matrix = pd.read_csv('empty_user_item_matrix.csv')
 
 for i in range(data_matrix.shape[0]):
     sum_classes = data_matrix.iloc[i, [i for i in range(linebreak[0], linebreak[1] + 1)]].sum()
@@ -45,4 +44,4 @@ for i in range(data_matrix.shape[0]):
         empty_matrix.iloc[i, j] = value
 
 empty_matrix.to_csv('user_item_matrix_normalised.csv',index=False)
-print(empty_matrix)
+# print(empty_matrix)
