@@ -2,8 +2,7 @@
 
 ## Overview
 
-To run this program, run *recommend.py*. This will recommend 3 classes for a target user. Detailed instructions are included below to
-allow for generation of recommendations for a new user.
+To run this program, run *GUI.py*. Log in with the username 'user' and password 'pass', or create a new account. Detailed instructions are included below.
 
 This program was built in order to create a recommender system for a **LIFT gym mock website** which can be viewed [here (*work in progress*)](https://github.com/feiIin/django-ecommerce/tree/jymbud_recommend).
 This program allows new users to sign up and express their interest in different workout plans or categories, and this data can be used to 
@@ -67,4 +66,14 @@ Create a user-item matrix with normalised data.
 
 *recommend.py*
 
-For a target user, find the nearest neighbours of that user and recommend this target user unseen classes depending on neighbour ratings.
+For a target user in the database, find the nearest neighbours of that user and recommend this target user unseen classes depending on neighbour ratings.
+
+*recommend_new_user.py*
+
+For preferences entered by a new user, find the nearest neighbours of that user and recommend this target user unseen classes depending on neighbour ratings.
+
+**Important Script**
+
+*GUI.py*
+
+Runs a graphical uer interface using tkinter, which allows access to *recommend.py* and *recommend_new_user.py*.
