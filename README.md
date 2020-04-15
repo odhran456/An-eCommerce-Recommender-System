@@ -2,7 +2,7 @@
 
 ## Overview
 
-To run this program, run *GUI.py*. Log in with the username 'user' and password 'pass', or create a new account. Detailed instructions are included below.
+To run this program, run *GUI.py*. Log in with the username 'Deirbhile' and password 'pass', or create a new account. Detailed instructions are included below.
 
 This program was built in order to create a recommender system for a **LIFT gym mock website** which can be viewed [here (*work in progress*)](https://github.com/feiIin/django-ecommerce/tree/jymbud_recommend).
 This program allows new users to sign up and express their interest in different workout plans or categories, and this data can be used to 
